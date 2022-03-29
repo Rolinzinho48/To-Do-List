@@ -48,8 +48,9 @@ function listarTarefas(txtTarefa){
     document.querySelector("ul").appendChild(Tarefa)
 }
 
-function CriarTarefa(txtTarefa){
+function CriarTarefa(){
     
+    let txtTarefa = document.getElementById("inputText").value
     let Tarefa = document.createElement("li")
     let Tarefa2 = document.createElement("label")
   
@@ -77,10 +78,6 @@ function RemoverTarefa(event){
     event.target.parentElement.remove()  
 }
 
-function GeradorTarefa(){
-    let txt = document.getElementById("inputText").value
-    CriarTarefa(txt)
-}
 
 let btn = document.getElementById("botao1")
-btn.addEventListener("click",GeradorTarefa);
+btn.addEventListener("click",CriarTarefa);
